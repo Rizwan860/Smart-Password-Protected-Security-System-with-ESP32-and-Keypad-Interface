@@ -89,23 +89,13 @@ The system demonstrates core embedded systems concepts such as GPIO interfacing,
 - Wi-Fi based logging system  
 - Wrong attempt lockout system  
 
----
-
-## 📷 Project Images
-
-_Add hardware setup and circuit images here_
-
----
-
-## 🎥 Demo Video
-
-_Add demo video link or GIF here_
 
 ---
 
 ## 👨‍💻 Author
 
 Shaik Rizwan Basha
+
 ESP32 Embedded Systems Project  
 Focused on firmware development, IoT fundamentals, and real-world embedded applications.
 

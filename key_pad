@@ -1,0 +1,98 @@
+# ⌨️ 4×4 Matrix Keypad Interfacing with ESP32
+
+## 📌 Introduction
+A 4×4 matrix keypad is an input device used in embedded systems to enter numbers and characters. It has 16 keys arranged in 4 rows and 4 columns and uses only 8 GPIO pins, making it efficient for microcontrollers like ESP32.
+
+---
+
+## 🧠 Basic Idea
+Each key is a switch between one row and one column.
+
+Example:
+Key "5" connects R2 and C2.
+
+---
+
+## ⚙️ Working Principle
+
+1. Rows are configured as OUTPUT
+2. Columns are configured as INPUT (with pull-up resistors)
+3. Microcontroller scans one row at a time
+4. If a key is pressed:
+   - corresponding column becomes LOW
+5. MCU detects row + column position to identify the key
+
+---
+
+## 🔄 Scanning Process
+
+- Set R1 LOW → read columns
+- Set R2 LOW → read columns
+- Set R3 LOW → read columns
+- Set R4 LOW → read columns
+- Repeat continuously
+
+---
+
+## ⚡ Active LOW Concept
+
+- Default state of columns = HIGH (pull-up)
+- When key is pressed → column becomes LOW
+- LOW signal means key is pressed
+
+---
+
+## 🔌 ESP32 Pin Connection Example
+
+Rows (Output):
+- R1 → GPIO14
+- R2 → GPIO27
+- R3 → GPIO26
+- R4 → GPIO25
+
+Columns (Input):
+- C1 → GPIO33
+- C2 → GPIO32
+- C3 → GPIO22
+- C4 → GPIO23
+
+---
+
+## 📱 Example
+
+If key "7" is pressed:
+
+R3 + C1 connection is made
+
+MCU detects:
+Row = R3, Column = C1 → Key = 7
+
+---
+
+## 🧰 Applications
+
+- Password door lock systems
+- ATM machines
+- Embedded menus
+- Security systems
+- Industrial control panels
+
+---
+
+## ⚠️ Important Notes
+
+- Do not use GPIO 34, 35, 36, 39 for output
+- Use pull-up resistors for columns
+- Add software debounce for stable input
+
+---
+
+## ⭐ GitHub Commit Message
+
+git commit -m "Added 4x4 keypad interfacing documentation for ESP32"
+
+---
+
+## 🧠 Summary
+
+A 4×4 keypad works by detecting which row and column are connected when a key is pressed. The microcontroller scans rows continuously and reads columns to identify the pressed key.

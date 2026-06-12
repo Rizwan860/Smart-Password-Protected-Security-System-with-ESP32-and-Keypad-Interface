@@ -87,12 +87,6 @@ Row = R3, Column = C1 → Key = 7
 
 ---
 
-## ⭐ GitHub Commit Message
-
-git commit -m "Added 4x4 keypad interfacing documentation for ESP32"
-
----
-
 ## 🧠 Summary
 
 A 4×4 keypad works by detecting which row and column are connected when a key is pressed. The microcontroller scans rows continuously and reads columns to identify the pressed key.
